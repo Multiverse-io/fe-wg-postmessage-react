@@ -7,27 +7,39 @@ import {
   Link
 } from 'react-router-dom';
 
-const HomePage = () => (
-  <>
-    <h1>Hello from React!</h1>
-    <ul>
-      <li><Link to="/quiz">Quiz</Link></li>
-    </ul>
-  </>
-)
+const HomePage = () => {
+  React.useEffect(() => {
+    window.postMessage('headerSetDefault');
+  }, []);
 
-const QuizPage = () => (
-  <>
-    <h1>Hello from React!</h1>
-    <form>
-      How many pence to a shilling? <br />
-      <label><input type="radio" name="question-1" value="10" /> 10</label><br />
-      <label><input type="radio" name="question-1" value="12" /> 12</label><br />
-      <label><input type="radio" name="question-1" value="14" /> 14</label><br />
-      <button type="submit">Submit</button>
-    </form>
-  </>
-)
+  return (
+    <>
+      <h1>Hello from React!</h1>
+      <ul>
+        <li><Link to="/quiz">Quiz</Link></li>
+      </ul>
+    </>
+  )
+}
+
+const QuizPage = () => {
+  React.useEffect(() => {
+    window.postMessage('headerSetBackButton');
+  }, []);
+
+  return (
+    <>
+      <h1>Hello from React!</h1>
+      <form>
+        How many pence to a shilling? <br />
+        <label><input type="radio" name="question-1" value="10" /> 10</label><br />
+        <label><input type="radio" name="question-1" value="12" /> 12</label><br />
+        <label><input type="radio" name="question-1" value="14" /> 14</label><br />
+        <button type="submit">Submit</button>
+      </form>
+    </>
+  )
+}
 
 const App = () => (
   <Router>
