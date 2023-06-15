@@ -11,7 +11,8 @@
   "license": "Unknown",
   "devDependencies": {
     "webpack": "^5.87.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "@babel/core": "^7.22.5",
@@ -19,6 +20,7 @@
     "@babel/preset-react": "^7.22.5",
     "babel-loader": "^9.1.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.13.0"
   }
 }

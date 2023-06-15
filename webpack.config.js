@@ -1,4 +1,10 @@
 module.exports = {
+  devServer: {
+    static: './dist',
+    historyApiFallback: {
+      index: 'index.html'
+    }
+  },
   module: {
     rules: [
       {

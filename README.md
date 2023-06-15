@@ -4,10 +4,7 @@ Install
 -------
 Run `npm install`.
 
-Build
------
-Run `npx webpack`.
-
 View demo
 ---------
-Open `dist/index.html` in the browser.
+Run `npx webpack serve --mode development`.
+Open <http://localhost:8080> in the browser.
